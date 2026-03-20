@@ -17,7 +17,7 @@
           <img
             src="/logo.png"
             alt="Afintrix"
-            class="w-10 h-10"
+            class="h-24 w-24 shrink-0 object-contain sm:h-28 sm:w-28 lg:h-32 lg:w-32"
           >
           <span class="ml-2 text-xl text-black dark:text-white">Afintrix</span>
         </router-link>

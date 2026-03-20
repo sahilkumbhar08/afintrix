@@ -4,19 +4,19 @@
     class="bg-white dark:bg-notion-dark border-b"
   >
     <div class="max-w-7xl mx-auto px-8">
-      <div class="flex items-center justify-between h-14">
+      <div class="flex items-center justify-between min-h-24 py-3 sm:min-h-28 sm:py-3">
         <div class="flex items-center gap-2">
           <NuxtLink
             :to="{ name: user ? 'home' : 'index' }"
-            class="flex-shrink-0 font-semibold hover:no-underline flex items-center"
+            class="flex-shrink-0 font-semibold hover:no-underline flex items-center gap-3"
           >
             <img
               src="/logo.png"
               alt="Afintrix"
-              class="w-6 h-6"
+              class="h-20 w-20 shrink-0 object-contain sm:h-24 sm:w-24 lg:h-28 lg:w-28"
             >
             <span
-              class="ml-2 text-md hidden sm:inline text-black dark:text-white"
+              class="text-md hidden sm:inline text-black dark:text-white"
             >Afintrix</span>
           </NuxtLink>
           <WorkspaceDropdown class="ml-6">

@@ -5,7 +5,7 @@
         <img
           src="/logo.png"
           alt="Afintrix logo"
-          class="w-8 h-8"
+          class="h-28 w-28 shrink-0 object-contain sm:h-32 sm:w-32 lg:h-36 lg:w-36"
         >
         <h1 class="ml-2 text-xl font-semibold text-black">
           Afintrix
