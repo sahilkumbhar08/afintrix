@@ -9,7 +9,7 @@ We generally support the latest release series and the `main` branch. Security f
 ## Reporting a Vulnerability
 
 -   Please do not open public GitHub issues for security reports.
--   Email [julien@opnform.com](mailto:julien@opnform.com?subject=Security%20Vulnerability%20Report%20for%20OpnForm&body=Please%20describe%20the%20vulnerability%20in%20detail%20including%20affected%20version%2C%20steps%20to%20reproduce%2C%20impact%2C%20and%20any%20suggested%20mitigations.) with details.
+-   Contact your Afintrix deployment maintainer or organization security channel. Do not use public issues for sensitive reports.
 
 When reporting, include as much information as possible:
 

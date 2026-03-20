@@ -31,6 +31,7 @@
 <script setup>
 import FeatureBase from "~/components/vendor/FeatureBase.vue"
 import Clarity from "~/components/vendor/Clarity.vue"
+import { BRAND_NAME, BRAND_FAVICON } from "~/config/branding"
 
 const config = useRuntimeConfig()
 const route = useRoute()
@@ -40,9 +41,8 @@ const isPublicFormPage = computed(() => route.name === 'forms-slug')
 
 // SEO and head configuration
 useOpnSeoMeta({
-  title: "Free Form Builder with Unlimited Submissions",
-  description:
-    "Build beautiful, powerful forms for free with OpnForm. Unlimited submissions, rich features, and seamless integrations — fully open-source and easy to use.",
+  title: "Afintrix Forms",
+  description: "Afintrix Form Management Platform",
   ogImage: "/img/social-preview.jpg",
   robots: () => {
     return config.public.env === "production" ? null : "noindex, nofollow"
@@ -51,7 +51,7 @@ useOpnSeoMeta({
 
 useHead({
   titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk} - OpnForm` : "OpnForm"
+    return titleChunk ? `${titleChunk} - ${BRAND_NAME}` : BRAND_NAME
   },
   meta: [
     {
@@ -65,9 +65,14 @@ useHead({
   ],
   link: [
     {
+      rel: 'icon',
+      type: 'image/x-icon',
+      href: BRAND_FAVICON
+    },
+    {
       rel: 'apple-touch-icon',
       type: 'image/png',
-      href: '/favicon.ico'
+      href: BRAND_FAVICON
     }
   ],
   htmlAttrs: () => ({

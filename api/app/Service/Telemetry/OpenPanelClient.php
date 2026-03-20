@@ -18,7 +18,7 @@ class OpenPanelClient
      * Identify an instance as a user in OpenPanel.
      *
      * @param string $profileId The instance ID to use as profile ID
-     * @param string|null $version The OpnForm version
+     * @param string|null $version The application version
      * @param array $properties Additional properties to identify
      * @return bool
      */

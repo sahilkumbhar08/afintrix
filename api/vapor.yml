@@ -1,5 +1,5 @@
 id: 34225
-name: OpnForm
+name: Afintrix
 ignore:
   - storage/clockwork
   - storage/logs
@@ -16,9 +16,9 @@ environments:
     queue-memory: 4096
     queue-timeout: 900
     runtime: "php-8.2:al2-arm"
-    storage: opnforms-prod
-    database: OpnForm
-    domain: api.opnform.com
+    storage: afintrix-prod
+    database: Afintrix
+    domain: api.afintrix.com
     build:
       - "COMPOSER_MIRROR_PATH_REPOS=1 composer install --no-dev"
       - "php artisan optimize"
@@ -33,9 +33,9 @@ environments:
     cli-memory: 512
     cli-timeout: 900
     runtime: "php-8.2:al2-arm"
-    storage: opnforms-staging
-    database: OpnForm
-    domain: api.stg.opnform.com
+    storage: afintrix-staging
+    database: Afintrix
+    domain: api.staging.afintrix.com
     build:
       - "COMPOSER_MIRROR_PATH_REPOS=1 composer install --no-dev"
       - "php artisan optimize"

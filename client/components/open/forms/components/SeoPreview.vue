@@ -66,14 +66,14 @@ const previewTitle = computed(() => {
   if (props.form.seo_meta?.page_title) {
     return props.form.seo_meta.page_title
   }
-  return props.form?.title ? `${props.form.title} - OpnForm` : 'OpnForm'
+  return props.form?.title ? `${props.form.title} - Afintrix` : 'Afintrix'
 })
 
 const previewDescription = computed(() => {
   if (props.form.seo_meta?.page_description) {
     return props.form.seo_meta.page_description
   }
-  return 'Build beautiful, powerful forms for free with OpnForm. Unlimited submissions, rich features, and seamless integrations — fully open-source and easy to use.'
+  return 'Build beautiful, powerful forms for free with Afintrix. Unlimited submissions, rich features, and seamless integrations — fully open-source and easy to use.'
 })
 
 const previewDomain = computed(() => {

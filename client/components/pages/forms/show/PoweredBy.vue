@@ -12,6 +12,8 @@
 </template>
 
 <script setup>
+const config = useRuntimeConfig()
+
 const props = defineProps({
   source: {
     type: String,
@@ -19,7 +21,7 @@ const props = defineProps({
   },
   label: {
     type: String,
-    default: 'Made with OpnForm'
+    default: 'Powered by Afintrix'
   },
   color: {
     type: String,
@@ -28,7 +30,12 @@ const props = defineProps({
 })
 
 const targetLink = computed(() => {
-  return 'https://opnform.com?utm_source=' + props.source + '&utm_content=powered_by_btn'
+  const base = config.public.appUrl
+  if (!base) {
+    return '/'
+  }
+  const trimmed = base.replace(/\/$/, '')
+  return `${trimmed}/?utm_source=${props.source}&utm_content=powered_by_btn`
 })
 
 function getLuminanceFromHex (hex) {

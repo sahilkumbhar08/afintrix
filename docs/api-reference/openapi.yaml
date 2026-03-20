@@ -1,10 +1,10 @@
 openapi: 3.0.1
 info:
-    title: OpnForm API
-    description: API for interacting with OpnForm, primarily used for Zapier integration
+    title: Afintrix API
+    description: API for interacting with Afintrix Forms, primarily used for Zapier integration
     version: 1.0.0
 servers:
-    - url: https://api.opnform.com
+    - url: https://api.afintrix.com
 security:
     - bearerAuth: []
 tags:
@@ -1277,7 +1277,7 @@ components:
                     nullable: true
                 no_branding:
                     type: boolean
-                    description: Whether to hide the OpnForm branding.
+                    description: Whether to hide the default Afintrix branding.
                 transparent_background:
                     type: boolean
                     description: Transparent background when form is embedded.
@@ -1586,7 +1586,7 @@ components:
                     type: object
                     description: Integration-specific configuration. For webhooks, contains webhook_url.
                     example:
-                        webhook_url: "https://example.com/opnform-hook"
+                        webhook_url: "https://example.com/afintrix-hook"
         IntegrationEvent:
             type: object
             properties:

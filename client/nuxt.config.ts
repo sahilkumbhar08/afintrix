@@ -82,8 +82,8 @@ export default defineNuxtConfig({
   sentry: {
       sourceMapsUploadOptions: {
           authToken: process.env.SENTRY_AUTH_TOKEN,
-          org: "opnform",
-          project: "opnform-vue",
+          org: "afintrix",
+          project: "afintrix-vue",
       },
   },
 

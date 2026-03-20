@@ -367,7 +367,7 @@ class GenerateTaxExport extends Command
 
         $totalEur = 0;
         if (isset($invoice->charge) && isset($invoice->charge->balance_transaction)) {
-            // Fast path: invoice has embedded charge (OpnForm-style accounts)
+            // Fast path: invoice has embedded charge (legacy-style accounts)
             $bt = $invoice->charge->balance_transaction;
             // balance_transaction->amount is NET (after fees), add fees back to get GROSS
             $netEur = $bt->amount ?? 0;

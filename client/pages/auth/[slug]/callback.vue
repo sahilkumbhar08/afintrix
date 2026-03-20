@@ -101,7 +101,7 @@ const handleCallback = async () => {
     // Redirect based on user status (aligned with OAuth callback pattern)
     if (response.new_user) {
       router.push({ name: "forms-create" })
-      useAlert().success("Success! You're now registered with OIDC. Welcome to OpnForm.")
+      useAlert().success("Success! You're now registered with OIDC. Welcome to Afintrix.")
     } else {
       // For existing users, redirect to intended URL or home (aligned with OAuth)
       router.push({ name: "home" })
@@ -143,7 +143,7 @@ const handleTwoFactorVerifiedAndRedirect = async (tokenData) => {
   // Redirect based on user status
   if (tokenData.new_user) {
     router.push({ name: "forms-create" })
-    useAlert().success("Success! You're now registered with OIDC. Welcome to OpnForm.")
+    useAlert().success("Success! You're now registered with OIDC. Welcome to Afintrix.")
   } else {
     router.push({ name: "home" })
     useAlert().success("Successfully signed in!")

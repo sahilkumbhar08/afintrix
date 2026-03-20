@@ -6,6 +6,7 @@ import { useAlert } from '~/composables/useAlert'
 import { useIsAuthenticated } from '~/composables/useAuthFlow'
 
 import { useForm } from '~/composables/useForm'
+import opnformConfig from '~/opnform.config.js'
 
 export const useWorkingFormStore = defineStore("working_form", {
   state: () => ({
@@ -59,12 +60,14 @@ export const useWorkingFormStore = defineStore("working_form", {
       let message = ''
       if (selfHosted) {
         // Self-hosted: safety notice + docs
-        message = 'Custom code is disabled for safety on self-hosted. See technical docs to learn more.'
-        actions.push({
-          label: 'View docs',
-          icon: 'i-heroicons-book-open',
-          onclick: () => { if (import.meta.client) window.open('https://docs.opnform.com/introduction', '_blank') }
-        })
+        message = 'Custom code is disabled for safety on self-hosted. See your deployment documentation to learn more.'
+        if (opnformConfig.links.tech_docs) {
+          actions.push({
+            label: 'View docs',
+            icon: 'i-heroicons-book-open',
+            onclick: () => { if (import.meta.client) window.open(opnformConfig.links.tech_docs, '_blank') }
+          })
+        }
       } else {
         // Cloud: require custom domain + Crisp help
         message = 'Your form needs to be using a custom domain to add a code block.'

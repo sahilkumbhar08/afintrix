@@ -45,7 +45,7 @@
           </p>
           <ul class="mt-4 space-y-2 text-sm">
             <li>
-              Do you want to know why users choose OpnForm? 
+              Do you want to know why users choose Afintrix? 
               <NuxtLink
                 class="text-blue-500 hover:text-blue-600"
                 :to="{ name: 'ai-form-builder' }"
@@ -62,14 +62,16 @@
                 Get inspired with ready-to-use form templates!
               </NuxtLink>
             </li>
-            <li>
+            <li v-if="opnformConfig.links.help_url">
               Check Out Our Help Center
-              <NuxtLink
+              <a
                 class="text-blue-500 hover:text-blue-600"
-                to="https://help.opnform.com/en/"
+                :href="opnformConfig.links.help_url"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Find quick answers to common questions.
-              </NuxtLink>
+              </a>
             </li>
           </ul>
         </div>
@@ -83,6 +85,8 @@
 </template>
 
 <script setup>
+import opnformConfig from '~/opnform.config.js'
+
 const crisp = useCrisp()
 
 const actions = [
@@ -105,7 +109,7 @@ const actions = [
   {
     to: { name: 'index' },
     icon: 'i-heroicons-document-magnifying-glass',
-    text: 'Explore OpnForm'
+    text: 'Explore Afintrix'
   },
   {
     href: '#',

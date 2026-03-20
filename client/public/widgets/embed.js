@@ -146,7 +146,7 @@
     if (!iframeCreated) {
       iframe = document.createElement("iframe")
       iframe.src = formUrl
-      iframe.title = "OpnForm"
+      iframe.title = "Afintrix"
       iframe.style.maxWidth = `${width}px`
       popupDiv.appendChild(iframe)
       iframeCreated = true

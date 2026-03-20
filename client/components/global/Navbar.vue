@@ -11,13 +11,13 @@
             class="flex-shrink-0 font-semibold hover:no-underline flex items-center"
           >
             <img
-              src="/img/logo.svg"
-              alt="notion tools logo"
+              src="/logo.png"
+              alt="Afintrix"
               class="w-6 h-6"
             >
             <span
               class="ml-2 text-md hidden sm:inline text-black dark:text-white"
-            >OpnForm</span>
+            >Afintrix</span>
           </NuxtLink>
           <WorkspaceDropdown class="ml-6">
             <template #default="{ workspace }">
@@ -67,7 +67,7 @@
               />
             </button>
             <a
-              v-else
+              v-else-if="opnformConfig.links.changelog_url"
               :href="opnformConfig.links.changelog_url"
               target="_blank"
               :class="navLinkClasses"
@@ -100,6 +100,7 @@
           </NuxtLink>
 
           <NuxtLink
+            v-if="helpUrl"
             :href="helpUrl"
             :class="navLinkClasses"
             target="_blank"

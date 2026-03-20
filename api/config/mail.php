@@ -95,8 +95,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'contact@opnform.com'),
-        'name' => env('MAIL_FROM_NAME', 'NotionForms'),
+        'address' => env('MAIL_FROM_ADDRESS', 'noreply@example.com'),
+        'name' => env('MAIL_FROM_NAME', 'Afintrix'),
     ],
 
     /*

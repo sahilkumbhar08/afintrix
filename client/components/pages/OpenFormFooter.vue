@@ -15,16 +15,17 @@
           class="flex-shrink-0 font-semibold flex items-center"
         >
           <img
-            src="/img/logo.svg"
-            alt="notion tools logo"
+            src="/logo.png"
+            alt="Afintrix"
             class="w-10 h-10"
           >
-          <span class="ml-2 text-xl text-black dark:text-white"> OpnForm </span>
+          <span class="ml-2 text-xl text-black dark:text-white">Afintrix</span>
         </router-link>
       </div>
       <div class="flex justify-center mt-5 md:mt-0">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-2">
           <a
+            v-if="opnformConfig.links.feature_requests"
             :href="opnformConfig.links.feature_requests"
             target="_blank"
             class="text-neutral-600 dark:text-neutral-400 transition-colors duration-300 hover:text-blue-500"
@@ -32,6 +33,7 @@
             Feature Requests
           </a>
           <a
+            v-if="opnformConfig.links.roadmap"
             :href="opnformConfig.links.roadmap"
             target="_blank"
             class="text-neutral-600 dark:text-neutral-400 transition-colors duration-300 hover:text-blue-500"
@@ -39,6 +41,7 @@
             Roadmap
           </a>
           <a
+            v-if="opnformConfig.links.discord"
             :href="opnformConfig.links.discord"
             target="_blank"
             class="text-neutral-600 dark:text-neutral-400 transition-colors duration-300 hover:text-blue-500"
@@ -46,6 +49,7 @@
             Discord
           </a>
           <a
+            v-if="opnformConfig.links.tech_docs"
             :href="opnformConfig.links.tech_docs"
             target="_blank"
             class="text-neutral-600 dark:text-neutral-400 transition-colors duration-300 hover:text-blue-500"

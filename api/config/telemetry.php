@@ -6,7 +6,7 @@ return [
     | Anonymous Telemetry Enabled
     |--------------------------------------------------------------------------
     |
-    | OpnForm collects anonymous usage data to help improve the product. This
+    | This application may collect anonymous usage data to help improve the product. This
     | telemetry is completely anonymous and contains no personally identifiable
     | information (PII). None of your customer data, form content, submission
     | data, or user emails are ever transmitted.
@@ -32,7 +32,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | The OpenPanel endpoint URL where telemetry events will be sent.
-    | This is hardcoded for OpnForm's telemetry collection.
+    | Default OpenPanel endpoint for optional anonymous telemetry.
     |
     */
 
@@ -43,7 +43,7 @@ return [
     | OpenPanel Client ID
     |--------------------------------------------------------------------------
     |
-    | OpenPanel client ID for OpnForm telemetry authentication.
+    | OpenPanel client ID for telemetry authentication.
     | Hardcoded - users do not need to configure this.
     |
     */
@@ -55,7 +55,7 @@ return [
     | OpenPanel Client Secret
     |--------------------------------------------------------------------------
     |
-    | OpenPanel client secret for OpnForm telemetry authentication.
+    | OpenPanel client secret for telemetry authentication.
     | Hardcoded - users do not need to configure this.
     |
     */

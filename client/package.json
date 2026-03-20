@@ -1,5 +1,6 @@
 {
-  "name": "nuxt-app",
+  "name": "afintrix-forms",
+  "description": "Afintrix Forms Platform",
   "private": true,
   "type": "module",
   "scripts": {

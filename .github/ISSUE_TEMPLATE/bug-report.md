@@ -40,7 +40,7 @@ Steps to reproduce the behavior:
 
     <!--[e.g. chrome, safari] -->
 
--   #### OpnForm version 
+-   #### Afintrix / app version 
 
     <!--[e.g. 22] -->
 

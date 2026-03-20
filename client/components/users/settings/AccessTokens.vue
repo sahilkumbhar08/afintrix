@@ -11,6 +11,7 @@
 
       <div class="flex shrink-0 items-center gap-2">
         <UButton
+          v-if="opnformConfig.links.api_docs"
           label="API Docs"
           icon="i-heroicons-book-open"
           variant="outline"
@@ -115,7 +116,13 @@
             <div>
               <h4 class="text-sm font-medium text-neutral-900">Rate Limits</h4>
               <p class="text-sm text-neutral-600 mt-1">
-                API requests are rate limited. <a href="https://docs.opnform.com/api-reference/introduction#rate-limits" target="_blank" class="text-blue-500 hover:underline">Check our documentation</a> for current limits and best practices.
+                API requests are rate limited.
+                <template v-if="opnformConfig.links.api_docs">
+                  <a :href="opnformConfig.links.api_docs" target="_blank" class="text-blue-500 hover:underline">Check our documentation</a> for current limits and best practices.
+                </template>
+                <template v-else>
+                  See your deployment API documentation for limits and best practices.
+                </template>
               </p>
             </div>
           </div>

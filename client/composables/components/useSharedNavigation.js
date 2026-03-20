@@ -86,13 +86,13 @@ export const useSharedNavigation = () => {
           },
           onClick: openChangelog
         })] : []),
-        createNavItem({
+        ...(opnformConfig.links.roadmap ? [createNavItem({
           label: 'Roadmap',
           icon: 'i-heroicons-map',
           to: opnformConfig.links.roadmap,
           target: '_blank'
-        }),
-        (featurebaseLoaded.value ? createNavItem({
+        })] : []),
+        ...(featurebaseLoaded.value ? [createNavItem({
           label: 'Feature Requests',
           icon: 'i-heroicons-light-bulb', 
           onClick: () => {
@@ -104,30 +104,30 @@ export const useSharedNavigation = () => {
                 }
             })
           }
-        }):  createNavItem({
+        })] : (opnformConfig.links.feature_requests ? [createNavItem({
           label: 'Feature Requests',
           icon: 'i-heroicons-light-bulb', 
           to: opnformConfig.links.feature_requests,
           target: '_blank'
-        }))
+        })] : []))
       ]
     },
     // Help section
     {
       name: 'Help',
       items: [
-        createNavItem({
+        ...(opnformConfig.links.help_url ? [createNavItem({
           label: 'Help Center',
           icon: 'i-heroicons-question-mark-circle',
           to: opnformConfig.links.help_url,
           target: '_blank'
-        }),
-        createNavItem({
+        })] : []),
+        ...(opnformConfig.links.api_docs ? [createNavItem({
           label: 'API Docs',
           icon: 'i-heroicons-code-bracket',
           to: opnformConfig.links.api_docs,
           target: '_blank'
-        }),
+        })] : []),
         ...(isSelfHosted.value || !crisp ? [] : [createNavItem({
           label: 'Contact Support',
           icon: 'i-heroicons-chat-bubble-left-right',

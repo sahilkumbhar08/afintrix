@@ -14,7 +14,10 @@
       <div
         class="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative -mb-32 md:-mb-52 lg:-mb-72"
       >
-        <div class="flex justify-center mb-5">
+        <div
+          v-if="configLinks.github_url"
+          class="flex justify-center mb-5"
+        >
           <div class="relative flex items-center shadow-xs bg-white gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-neutral-600 ring ring-neutral-900/10 hover:ring-neutral-900/20"
           >
             <span class="font-semibold text-neutral-500">We're Open-Source</span><span
@@ -27,7 +30,7 @@
               <a
                 target="_blank"
                 class="flex items-center gap-x-1 hover:no-underline"
-                href="https://github.com/OpnForm/OpnForm"
+                :href="configLinks.github_url"
               >
               <span
                 class="absolute inset-0"
@@ -258,6 +261,7 @@
             </svg>
           </a>
           <TrackClick
+            v-if="configLinks.github_url"
             name="welcome_github_click"
           >
             <a
@@ -283,17 +287,14 @@
         </div>
 
         <p class="mt-12 text-white text-lg">
-          The form below is an OpnForm, give it a try !
+          Build and share forms with Afintrix Forms — try creating a form from your dashboard.
         </p>
         <div
-          class="md:max-w-5xl md:mx-auto w-full bg-white rounded-md mt-6 p-4 shadow-lg"
+          class="md:max-w-5xl md:mx-auto w-full bg-white rounded-md mt-6 p-8 shadow-lg text-center text-neutral-600"
         >
-          <iframe
-            class="mt-4"
-            style="border: none; width: 100%"
-            height="480px"
-            src="https://opnform.com/forms/opnform-contact"
-          />
+          <p class="text-base">
+            This demo contact form is not loaded on the white-label build. Sign in and use <strong>Create a form</strong> to get started.
+          </p>
         </div>
       </div>
 

@@ -75,7 +75,7 @@ Instructions for AI coding agents working in this repository.
 
 ### Project overview
 
-OpnForm is a no-code form builder with two main services: a **Laravel 11 API** (`api/`) and a **Nuxt 3 client** (`client/`). Development uses Docker Compose (`docker-compose.dev.yml`) which runs PostgreSQL, the API (PHP-FPM), the client (Nuxt dev server), and an Nginx ingress.
+**Afintrix Forms** (white-labeled from OpnForm) is a form builder with a **Laravel 11 API** (`api/`) and a **Nuxt 3 client** (`client/`). Development typically uses Docker Compose (`docker-compose.dev.yml`) which runs PostgreSQL, the API (PHP-FPM), the client (Nuxt dev server), and an Nginx ingress. For a dedicated local stack, see `docker-compose.local.yml`.
 
 ### Starting the dev environment
 
